@@ -26,15 +26,15 @@ To run your queries, enter:
 
 ## TO DO:
 
-0) Create your Tables
+0. Create your Tables
 Look at the data to see what fields are needed for the data to fit in the tables
 
 At minimum, should have a table for: Schools, Teachers, Classes, Students
 
-1) After the tables have been created, run the data to enter records into the tables. 
+1. After the tables have been created, run the data to enter records into the tables. 
 All the data has already been created for you, so you should only have to run this file.
 
 If you run into any errors, that means you'll need to make changes to your tables
 
-2) Start making queries! 
-* Show the names of all the classes that are currently have students enrolled
+2. Start making queries! 
+⋅⋅* Show the names of all the classes that are currently have students enrolled
