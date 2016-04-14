@@ -1,0 +1,62 @@
+DROP TABLE schools;
+DROP TABLE classes;
+DROP TABLE teachers;
+DROP TABLE students;
+DROP TABLE student_classes;
+
+CREATE TABLE schools (
+  sc_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(64),
+  address  VARCHAR(64),
+  city  VARCHAR(64),
+  state  VARCHAR(64),
+  email VARCHAR(128) UNIQUE,
+  phone VARCHAR(128) UNIQUE,
+  created_at DATETIME,
+  updated_at DATETIME
+);
+
+
+CREATE TABLE classes (
+  c_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  school_id INTEGER,
+  teacher_id INTEGER,
+  name VARCHAR(64) UNIQUE,
+  subject VARCHAR(64),
+  code VARCHAR(128) UNIQUE,
+  room INTEGER,
+  created_at DATETIME,
+  updated_at DATETIME,
+  FOREIGN KEY(school_id) REFERENCES schools(sc_id),
+  FOREIGN KEY(teacher_id) REFERENCES teachers(t_id)
+);
+
+
+CREATE TABLE teachers (
+  t_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  first_name VARCHAR(64),
+  last_name VARCHAR(64),
+  email VARCHAR(128) UNIQUE,
+  created_at DATETIME,
+  updated_at DATETIME
+);
+
+
+CREATE TABLE students (
+  s_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  first_name VARCHAR(64),
+  last_name VARCHAR(64),
+  email VARCHAR(128) UNIQUE,
+  created_at DATETIME,
+  updated_at DATETIME
+);
+
+
+
+CREATE TABLE student_classes (
+  id INTEGER PRIMARY KEY,
+  student_id INTEGER,
+  class_id INTEGER,
+  FOREIGN KEY(student_id) REFERENCES students(s_id),
+  FOREIGN KEY(class_id) REFERENCES classes(c_id)
+);

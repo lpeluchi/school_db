@@ -1,0 +1,81 @@
+-- Make Tables to match these records
+-- SCHOOLS
+INSERT INTO schools
+(name, city, state, created_at, updated_at)
+VALUES
+('Latin', 'Chicago', 'IL', DATETIME('now'), DATETIME('now'));
+
+INSERT INTO schools
+(name, city, state, created_at, updated_at)
+VALUES
+('Lab', 'Chicago', 'IL', DATETIME('now'), DATETIME('now'));
+
+INSERT INTO schools
+(name, city, state, created_at, updated_at)
+VALUES
+('Trinity', 'NYC', 'NY', DATETIME('now'), DATETIME('now'));
+
+
+-- STUDENTS
+INSERT INTO students
+(first_name, last_name, email, created_at, updated_at)
+VALUES
+('Jay', 'Stein', 'jstein', DATETIME('now'), DATETIME('now'));
+
+INSERT INTO students
+(first_name, last_name, email, created_at, updated_at)
+VALUES
+('Rain', 'S', '', DATETIME('now'), DATETIME('now'));
+
+INSERT INTO students
+(first_name, last_name, email, created_at, updated_at)
+VALUES
+('J', 'S', 'IL@il.com', DATETIME('now'), DATETIME('now'));
+
+
+-- CLASSES
+INSERT INTO classes
+(school_id, teacher_id, name, subject, code, room, created_at, updated_at)
+VALUES
+(1, 2, 'CSP', 'CompSci', "CS01", 317,  DATETIME('now'), DATETIME('now'));
+
+INSERT INTO classes
+(school_id, teacher_id, name, subject, code, room, created_at, updated_at)
+VALUES
+(2, 2, 'CSP2', 'CompSci', "CS02", 327,  DATETIME('now'), DATETIME('now'));
+
+INSERT INTO classes
+(school_id, teacher_id, name, subject, code, room, created_at, updated_at)
+VALUES
+(3, 3, 'CSP2', 'CompSci', "CS02", 313,  DATETIME('now'), DATETIME('now'));
+
+-- TEACHERS
+INSERT INTO teachers
+(first_name, last_name, email, created_at, updated_at)
+VALUES
+("Aaron", 'Smith', 'asmith@school.org', DATETIME('now'), DATETIME('now'));
+INSERT INTO teachers
+(first_name, last_name, email, created_at, updated_at)
+VALUES
+("Jen", 'Tran', 'jtran@school.org', DATETIME('now'), DATETIME('now'));
+INSERT INTO teachers
+(first_name, last_name, email, created_at, updated_at)
+VALUES
+("Juan", 'Swanson', 'jswanson@school.org', DATETIME('now'), DATETIME('now'));
+
+INSERT INTO teachers
+(first_name, last_name, email, created_at, updated_at)
+VALUES
+("Juan", 'Swanson', 'jswandson@school.org', DATETIME('now'), DATETIME('now'));
+
+
+-- STUDENT CLASSES
+INSERT INTO student_classes
+(student_id, class_id) VALUES (1,1);
+
+INSERT INTO student_classes
+(student_id, class_id) VALUES (2,2);
+
+INSERT INTO student_classes
+(student_id, class_id) VALUES (2,2);
+
