@@ -32,5 +32,4 @@ Look at the data to see what fields are needed for the data to fit in the tables
 2. After the tables have been created, run the data to enter records into the tables.  All the data has already been created for you, so you should only have to run this file. 
 ⋅⋅*If you run into any errors, that means you'll need to make changes to your tables
 
-3. Start making queries! 
-⋅⋅* Show the names of all the classes that are currently have students enrolled
+3. Start making queries! Experiement at first, then use the comments to find specific data to query. 
