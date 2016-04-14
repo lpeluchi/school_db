@@ -1,1 +1,52 @@
 -- Make tables here
+
+CREATE TABLE schools (
+	school_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name VARCHAR(64),
+	city VARCHAR(64),
+	state VARCHAR(64),
+	created_at DATETIME,
+	updated_at DATETIME
+);
+
+CREATE TABLE students (
+	student_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	first_name VARCHAR(64), 
+	last_name VARCHAR(64),
+	email VARCHAR(64),
+	created_at DATETIME,
+	updated_at DATETIME
+);
+
+CREATE TABLE classes (
+	c_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	school_id INTEGER,
+	teacher_id INTEGER,
+	name VARCHAR(64),
+	subject VARCHAR(64),
+	code VARCHAR(64),
+	room VARCHAR(64),
+	created_at DATETIME,
+	updated_at DATETIME,
+	FOREIGN KEY (school_id) REFERENCES schools(school_id),
+	FOREIGN KEY (teacher_id) REFERENCES teachers(teacher_id)
+);
+
+CREATE TABLE teachers (
+	teacher_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	first_name VARCHAR(64),
+	last_name VARCHAR(64),
+	email VARCHAR(64),
+	created_at DATETIME,
+	updated_at DATETIME
+);
+
+CREATE TABLE student_classes (
+	stucla_id INTEGER PRIMARY KEY AUTOINCREMENT,
+	student_id INTEGER,
+	class_id INTEGER,
+	FOREIGN KEY (student_id) REFERENCES students(student_id),
+	FOREIGN KEY (class_id) REFERENCES classes(class_id)
+);
+
+
